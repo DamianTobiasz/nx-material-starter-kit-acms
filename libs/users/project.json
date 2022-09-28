@@ -1,0 +1,27 @@
+{
+	"projectType": "library",
+	"root": "libs/users",
+	"sourceRoot": "libs/users/src",
+	"prefix": "lib",
+	"architect": {
+		"test": {
+			"builder": "@nrwl/jest:jest",
+			"outputs": [
+				"coverage/users"
+			],
+			"options": {
+				"jestConfig": "libs/users/jest.config.js",
+				"passWithNoTests": true
+			}
+		},
+		"lint": {
+			"executor": "@nrwl/linter:eslint",
+			"options": {
+				"lintFilePatterns": [
+					"/libs/users/**/*.ts",
+					"/libs/users/**/*.html"
+				]
+			}
+		}
+	}
+}
